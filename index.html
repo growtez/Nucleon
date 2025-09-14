@@ -640,16 +640,10 @@
         }
 
         /* Mobile menu link colors on primary background */
-        .nav-links a {
-            color: var(--white);
-        }
-        .nav-links a::before {
-            background: var(--white);
-        }
+        .nav-links a { color: var(--white); }
+        .nav-links a::before { background: var(--white); }
         .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--white);
-        }
+        .nav-links a.active { color: var(--white); }
 
         .mobile-menu-btn {
             display: block;
@@ -1187,8 +1181,27 @@
         background: #eee;
     }
     @media (max-width: 640px) {
-        .faculty-card { grid-template-columns: 1fr 120px; }
-        .faculty-photo img { width: 96px; height: 96px; }
+        /* Mobile: stack photo on top and center content; tighten spacing for compact cards */
+        .faculty-card { 
+            display: flex; 
+            flex-direction: column; 
+            min-height: unset;
+            padding: 0.5rem 0.75rem;
+        }
+        .faculty-content {
+            align-items: center;
+            text-align: center;
+            padding-top: 0.25rem;
+            gap: 0.35rem;
+        }
+        .faculty-photo {
+            order: -1; /* move photo to top */
+            padding: 0.5rem 0 0.25rem;
+        }
+        .faculty-photo img { width: 84px; height: 84px; }
+        .faculty-name { font-size: 0.98rem; line-height: 1.2; margin: 0; }
+        .faculty-role { font-size: 0.9rem; line-height: 1.2; }
+        .faculty-meta { font-size: 0.85rem; line-height: 1.25; margin-top: 0.1rem; }
     }
     .faculty-pagination .swiper-pagination-bullet {
         background: var(--primary) !important;
@@ -2172,7 +2185,99 @@
                                     <img src="images/irshad.jpg" alt="Photo of Md. Irshad Alam" onerror="this.onerror=null;this.src='images/11.jpg';">
                                 </div>
                             </div>
-                        </div>
+                            </div>
+                            <!-- Additional Faculty -->
+
+                            <div class="swiper-slide">
+                                <div class="faculty-card">
+                                    <div class="faculty-content">
+                                        <div class="faculty-name">Sangam Viswakarma</div>
+                                        <div class="faculty-role">Math Faculty</div>
+                                        <div class="faculty-meta">M.Sc (Mathematics)</div>
+                                    </div>
+                                    <div class="faculty-photo">
+                                        <img src="images/sangam.jpg" alt="Photo of Sangam Viswakarma" onerror="this.onerror=null;this.src='images/11.jpg';">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="faculty-card">
+                                    <div class="faculty-content">
+                                        <div class="faculty-name">Shubhradeep</div>
+                                        <div class="faculty-role">Math Faculty</div>
+                                        <div class="faculty-meta">M.Sc (Math) · IIT Guwahati · Ex. Aakash BYJU'S</div>
+                                    </div>
+                                    <div class="faculty-photo">
+                                        <img src="images/shubhradeep.jpg" alt="Photo of Shubhradeep" onerror="this.onerror=null;this.src='images/11.jpg';">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="faculty-card">
+                                    <div class="faculty-content">
+                                        <div class="faculty-name">Santosh Thapa</div>
+                                        <div class="faculty-role">Physics Faculty</div>
+                                        <div class="faculty-meta">B.Tech</div>
+                                    </div>
+                                    <div class="faculty-photo">
+                                        <img src="images/santosh.jpg" alt="Photo of Santosh Thapa" onerror="this.onerror=null;this.src='images/11.jpg';">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="faculty-card">
+                                    <div class="faculty-content">
+                                        <div class="faculty-name">Bijoy Dutta</div>
+                                        <div class="faculty-role">Chemistry Faculty</div>
+                                        <div class="faculty-meta">M.Sc (Chemistry) · IIT Guwahati · Ex. Aakash BYJU'S</div>
+                                    </div>
+                                    <div class="faculty-photo">
+                                        <img src="images/bijoy.jpg" alt="Photo of Bijoy Dutta" onerror="this.onerror=null;this.src='images/11.jpg';">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="faculty-card">
+                                    <div class="faculty-content">
+                                        <div class="faculty-name">Rahul Modak</div>
+                                        <div class="faculty-role">Biology Faculty</div>
+                                        <div class="faculty-meta">M.Sc (Zoology, Cell Biology) · Drug Expert · Dip. in Agriculture (Chem)</div>
+                                    </div>
+                                    <div class="faculty-photo">
+                                        <img src="images/rahulmodak.jpg" alt="Photo of Rahul Modak" onerror="this.onerror=null;this.src='images/11.jpg';">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="faculty-card">
+                                    <div class="faculty-content">
+                                        <div class="faculty-name">Buddhadeb Pandit</div>
+                                        <div class="faculty-role">Chemistry Faculty</div>
+                                        <div class="faculty-meta">M.Sc (Chemistry), Presidency College</div>
+                                    </div>
+                                    <div class="faculty-photo">
+                                        <img src="images/buddhadeb.jpg" alt="Photo of Buddhadeb Pandit" onerror="this.onerror=null;this.src='images/11.jpg';">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="faculty-card">
+                                    <div class="faculty-content">
+                                        <div class="faculty-name">Tridip Dey</div>
+                                        <div class="faculty-role">Biology Faculty</div>
+                                        <div class="faculty-meta">M.Sc (Zoology) · Asst. Professor, Dudhnoi College</div>
+                                    </div>
+                                    <div class="faculty-photo">
+                                        <img src="images/tridipdey.jpg" alt="Photo of Tridip Dey" onerror="this.onerror=null;this.src='images/11.jpg';">
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                     <div class="swiper-pagination faculty-pagination"></div>
                 </div>
@@ -2265,6 +2370,22 @@
                                     <div class="author-info">
                                         <h4>Mr. Sutradhar</h4>
                                         <span>Principal<br> DPS Itanagar</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Principal: Nongthombam Elizabeth.  -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-content">
+                                    <p>“Best wishes to the Nucleon Team for continued success in guiding students toward their academic goals. Your dedication to excellence in education truly impacts many lives. Keep up the great work!”</p>
+                                </div>
+                                <div class="testimonial-author">
+                                    <img class="author-avatar" src="images/sutradhar.jpg" alt="Photo of Principal Sutradhar">
+                                    <div class="author-info">
+                                        <h4>Nongthombam Elizabeth</h4>
+                                        <span>Principal<br> Holyflower Senior Secondary School, Teok</span>
                                     </div>
                                 </div>
                             </div>
@@ -2452,21 +2573,42 @@
 
         // Initialize Swiper for faculty
         const facultySwiper = new Swiper('.faculty-swiper', {
-            loop: true,
+            loop: false,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
             },
             slidesPerView: 1,
             spaceBetween: 20,
+            grid: {
+                rows: 1,
+                fill: 'row',
+            },
             pagination: {
                 el: '.faculty-pagination',
                 clickable: true,
             },
             breakpoints: {
-                640: { slidesPerView: 1, spaceBetween: 20 },
-                768: { slidesPerView: 2, spaceBetween: 24 },
-                1024: { slidesPerView: 3, spaceBetween: 28 }
+                0: { 
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+                    grid: { rows: 2, fill: 'row' }
+                },
+                640: { 
+                    slidesPerView: 2, 
+                    spaceBetween: 16,
+                    grid: { rows: 2, fill: 'row' }
+                },
+                768: { 
+                    slidesPerView: 2, 
+                    spaceBetween: 24,
+                    grid: { rows: 2, fill: 'row' }
+                },
+                1024: { 
+                    slidesPerView: 3, 
+                    spaceBetween: 28,
+                    grid: { rows: 2, fill: 'row' }
+                }
             }
         });
 
